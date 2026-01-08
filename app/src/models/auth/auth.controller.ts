@@ -4,6 +4,7 @@ import { AuthRegisterDto } from './dto/register-auth.dto';
 import { AuthLoginDto } from './dto/login-auth.dto';
 import { AuthGuard } from '@nestjs/passport';
 import { CurrentUser } from '../../common/decorators/current-user.decorator';
+import { Public } from '../../common/decorators/public.decorator';
 import { ApiTags, ApiOperation, ApiResponse, ApiBearerAuth } from '@nestjs/swagger';
 import { User } from '../users/entities/user.entity';
 
@@ -14,9 +15,10 @@ class AuthResponseDto {
 }
 
 @ApiTags('auth')
+@Public()
 @Controller('auth')
 export class AuthController {
-  constructor(private readonly authService: AuthService) {}
+  constructor(private readonly authService: AuthService) { }
 
   @Post('register')
   @ApiOperation({ summary: 'Register a new user' })
