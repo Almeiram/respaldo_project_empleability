@@ -61,7 +61,7 @@ export class AplicationsController {
   @ApiOperation({ summary: 'Listar todas las postulaciones' })
   @ApiResponse({ status: 200, description: 'Listado de postulaciones', type: [Aplication] })
   async findAll(@Req() req: any) {
-    // Opcional: si es CODER, solo devuelve sus postulaciones
+    // si es CODER, solo devuelve sus postulaciones
     if (req.user.role === 'CODER') {
       return this.aplicationsService.findOne(req.user.id);
     }

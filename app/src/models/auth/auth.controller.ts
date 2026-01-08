@@ -35,13 +35,4 @@ export class AuthController {
     if (!user) throw new UnauthorizedException('Invalid credentials');
     return this.authService.login(user);
   }
-
-  @Get('profile')
-  @UseGuards(AuthGuard('jwt'))
-  @ApiBearerAuth()
-  @ApiOperation({ summary: 'Get current user profile (requires authentication)' })
-  @ApiResponse({ status: 200, description: 'Current user profile', type: User })
-  profile(@CurrentUser() user: User) {
-    return user;
-  }
 }

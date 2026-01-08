@@ -10,7 +10,7 @@ import { Aplication } from '../../aplications/entities/aplication.entity';
 
 export type Modality = 'remoto' | 'hibrido' | 'presencial';
 
-@Entity()
+@Entity("vacancies")
 export class Vacancy {
     @PrimaryGeneratedColumn()
     @ApiProperty({ example: 1, description: 'Auto-generated vacancy id' })

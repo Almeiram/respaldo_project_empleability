@@ -2,15 +2,15 @@ import {IsNotEmpty } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
 
 export class CreateAplicationDto {
-	@ApiProperty({ example: '123456789', description: 'User ID' })
+	@ApiProperty({ example: '1', description: 'User ID' })
 	@IsNotEmpty()
 	user_id: number;
 
-	@ApiProperty({ example: '123456789', description: 'Vacancy ID' })
+	@ApiProperty({ example: '2', description: 'Vacancy ID' })
 	@IsNotEmpty()
 	vacancy_id: number;
 
-	@ApiProperty({ example: '123456789', description: 'Applied ID' })
+	@ApiProperty({ example: '3', description: 'Applied ID' })
 	@IsNotEmpty()
 	applied_id: number;
 

@@ -8,7 +8,7 @@ import {
 import { User } from '../../users/entities/user.entity';
 import { Vacancy } from '../../vacancies/entities/vacancy.entity';
 
-@Entity()
+@Entity("aplications")
 export class Aplication {
   @PrimaryGeneratedColumn()
   id: number; 
