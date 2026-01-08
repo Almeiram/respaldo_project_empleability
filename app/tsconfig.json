@@ -1,7 +1,5 @@
 {
   "compilerOptions": {
-    "types": ["node"],
-    "lib": ["ES2022"],
     "module": "nodenext",
     "moduleResolution": "nodenext",
     "resolvePackageJsonExports": true,

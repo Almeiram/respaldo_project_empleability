@@ -10,6 +10,8 @@
   import { AplicationsModule } from './models/aplications/aplications.module';
   import { VacanciesModule } from './models/vacancies/vacancies.module';
 
+  console.log('API DB:', process.env.POSTGRES_DB);
+
   @Module({
     imports: [
       // Global environmental variables
