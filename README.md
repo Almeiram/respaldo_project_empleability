@@ -54,6 +54,7 @@ npm install --legacy-peer-deps
 2. Run in watch mode:
 
 ```bash
+docker compose up (more important for container)
 npm run start:dev
 ```
 
